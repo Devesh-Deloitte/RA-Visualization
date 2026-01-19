@@ -21,7 +21,7 @@ def fiscal_day_to_label(day_num: int, base_year: int = 2027) -> str:
 # ---------------------------
 # Page configuration & style
 # ---------------------------
-st.set_page_config(page_title="Annual Power Procurement Planning Outcomes", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Annual Power Procurement Planning Outcomes", page_icon="📊", layout="wide", initial_sidebar_state="collapsed")
 
 st.markdown(
     """
@@ -349,11 +349,11 @@ with tab4:
         st.download_button("Download Additions Data", data=csv_add, file_name="Capacity_Additions.csv", mime="text/csv")
         
 with tab5:
-    st.subheader("Regional Capacity Procurement Plan")
+    st.subheader("Region-wise Capacity Procurement Plan")
 
     # ---- Dummy Data Generation ----
     years = list(range(2026, 2036))
-    regions = ["Rajasthan", "Tamil Nadu", "Gujarat", "Target State"]
+    regions = ["Rajasthan", "Tamil Nadu", "Gujarat", "Target State", "CTU"]
     technologies = ["Solar", "Wind", "Hydro", "BESS", "PSP", "Thermal", "STOA", "Market"]
 
     # Create dummy capacity additions (MW)
@@ -372,8 +372,13 @@ with tab5:
         data.append([year, "Target State", "Wind", np.random.randint(200, 600)])
 
         # All other sources from Target State
-        for tech in ["Hydro", "BESS", "PSP", "Thermal", "STOA", "Market"]:
+        for tech in ["Hydro", "BESS", "PSP", "Thermal"]:
             data.append([year, "Target State", tech, np.random.randint(200, 800)])
+
+        # All other sources from Target State
+        for tech in ["STOA", "Market"]:
+            data.append([year, "CTU", tech, np.random.randint(200, 800)])
+
 
     df_sankey = pd.DataFrame(data, columns=["Year", "Region", "Technology", "Capacity_MW"])
 

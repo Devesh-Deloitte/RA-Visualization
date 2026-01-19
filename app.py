@@ -13,7 +13,7 @@ import streamlit as st
 # from irp_engine.solver import run_irp
 # from irp_engine.outputs_writer import write_irp_outputs
 
-st.set_page_config(page_title="IRP Inputs", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="IRP Inputs", page_icon="⚡", layout="wide", initial_sidebar_state="collapsed")
 
 st.title("Annual Power Procurement Planning – Inputs")
 
