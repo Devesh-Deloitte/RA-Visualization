@@ -37,17 +37,17 @@ This Excel workbook template should contain:
 
 1) Hourly Demand & Price Forecasts
     
-2) Existing & Planned Generation Portfolio (commissioning date, retirement date)
+2) Details of Existing & Planned Generation Portfolio (installed capacity, utility share, commissioning date, retirement date etc.)
 
-3) Technology-wise Technical Parameters (technical minimum, ramp rates, minimum up/down time, forced and planned outages)
+3) Technology-wise Technical Parameters (technical minimum, ramp rates, minimum up/down time, forced and planned outages etc.)
 
-4) Technology-wise Commercial Parameters (fixed and variable costs, start-up / shutdown costs)
+4) Technology-wise Commercial Parameters (fixed and variable costs, start-up / shutdown costs etc.)
 
 5) Region-wise Renewable Energy Hourly Profiles
 
 6) Year-on-year Addition Limits & Expansion Potential
 
-7) Other Inputs Including Existing Short-term/Medium-term Contracts, RPO, ATC Limits 
+7) Other Inputs Including Existing Short-term/Medium-term Contracts, RPO, and ATC Limits 
 """
 )
 
